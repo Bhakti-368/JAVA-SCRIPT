@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+
+        <ul>
+            <li class="active">🏠 Dashboard</li>
+            <li>👨‍⚕️ Doctors</li>
+            <li>🧑 Patients</li>
+            <li>📅 Appointments</li>
+            <li>💰 Payments</li>
+            <li>📊 Reports</li>
+            <li>⚙ Settings</li>
+        </ul>
+
+        <button class="logout">Logout</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Navbar -->
+        <header class="navbar">
+            <h1>Dashboard</h1>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/50" alt="">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <!-- Cards -->
+        <section class="cards">
+
+            <div class="card blue">
+                <h3>Total Doctors</h3>
+                <h2>125</h2>
+            </div>
+
+            <div class="card green">
+                <h3>Total Patients</h3>
+                <h2>860</h2>
+            </div>
+
+            <div class="card orange">
+                <h3>Appointments</h3>
+                <h2>245</h2>
+            </div>
+
+            <div class="card red">
+                <h3>Revenue</h3>
+                <h2>₹85,000</h2>
+            </div>
+
+        </section>
+
+        <!-- Table -->
+        <section class="table-section">
+
+            <h2>Recent Appointments</h2>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Patient</th>
+                    <th>Doctor</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Rahul</td>
+                    <td>Dr. Mehta</td>
+                    <td><span class="success">Completed</span></td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Priya</td>
+                    <td>Dr. Shah</td>
+                    <td><span class="pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>Rohan</td>
+                    <td>Dr. Patel</td>
+                    <td><span class="cancel">Cancelled</span></td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
