@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            padding: 50px;
+            background-color: darkslategrey;
+            color: white;
+            font-family: calibri;
+            font-size: 32px;
+            position: relative;
+            display: none;
+        }
+        span{
+            position: absolute;
+            right: 8px;
+            top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>❌</span>
+        This is Time Function
+    </div>
+
+    <script>
+        // Once Time
+        setTimeout(()=>{
+            document.querySelector('div').style.display = "block";
+        },10000);
+
+        document.querySelector('span').onclick = function(){
+            document.querySelector('div').style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
