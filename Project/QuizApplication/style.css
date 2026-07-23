@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper
+{
+    background-color: #2D2B55;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
+}
+.allbtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+main:nth-child(1)
+{
+    background-color: #FF5E5E;
+    border-radius: 5px;
+    align-self: self-end;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main:nth-child(2)
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    flex-grow: 1;
+    margin-bottom: 100px;
+}
+
+
+
+section h2
+{
+    padding: 15px;
+    font-size: xx-large;
+}
+
+section
+{
+    background-color: #764BA2;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+article aside
+{
+    padding: 15px;
+    font-size: 18px;
+}
+
+article aside:hover
+{
+    border: 1px solid #A29BFE;
+    border-radius: 10px;
+    background-color: #EEF0FF ;
+}
+
+button
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor:pointer;
+    font-size: medium;
+}
+
+.previous-btn
+{
+    background-color: #EEEEEE;
+    color: #444444;
+    margin-left: 20px;
+}
+
+.submit-btn
+{
+    background-color: #2ECC71;
+    color: #FFFFFF;
+}
+
+.next-btn
+{
+    background-color: #EEEEEE;
+    color: #444444;
+}
+
+.no-curser
+{
+    cursor: not-allowed;
+}
+
+.start{
+    background-color: #2D2B55;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn{
+    padding: 15px 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background-color: #6C5CE7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.start-btn:hover{
+    background-color: #5848d8;
+    transform: scale(1.05);
+}
+
+.start-btn:active{
+    transform: scale(0.95);
+}
+
+.none{
+    display: none;
+}
+
+.footer{
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+    color: white;
+    background-color: #2D2B55;
+}
+
+.footer h1{
+    margin-bottom: 20px;
+}
+
+.footer h2{
+    margin: 10px 0;
+}
