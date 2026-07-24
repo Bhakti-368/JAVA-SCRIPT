@@ -273,6 +273,9 @@ document.querySelector("#quiz-form").onsubmit = function (e) {
         }
     }
 
+
+    
+
     if (!selected) {
         userAnswers[index] = undefined;
     }
