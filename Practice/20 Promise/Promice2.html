@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // function getData(){
+        //     return new Promise((resolve,reject)=>{
+        //         resolve();
+        //     });
+        // }
+
+        // getData().then(()=>{
+        //     console.log("hello");
+        // });
+
+
+
+        function getData(){
+            console.log("start");
+            return new Promise((resolve,reject)=>{
+                resolve(1234);
+            });
+        }
+
+        async function fetchData(){
+            var output =  getData();
+            console.log("Loading");
+            await output.then((data)=>{
+                console.log(data);
+            });
+            console.log("Fetching Completed");
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>

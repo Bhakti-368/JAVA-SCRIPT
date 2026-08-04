@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="country">
+    <button>Submit</button>
+
+    <h1>Country : <span></span> </h1>
+    <h2>No of Cases : <span></span> </h2>
+    <h3>No of Deaths : <span></span>  </h3>
+
+    <script>
+        // Global Data
+        // const CORONA_API = "https://disease.sh/v3/covid-19/all";
+
+        
+        
+        document.querySelector('button').onclick = function(){
+            document.querySelector('h1 span').innerText = "";
+            document.querySelector('h2 span').innerText = "";
+            document.querySelector('h3 span').innerText = "";
+
+            var country = document.querySelector('input').value;
+            document.querySelector('h1 span').append(country);
+            const CORONA_API = `https://disease.sh/v3/covid-19/countries/${country}`;
+    
+    
+            fetch(CORONA_API).then((response)=>{
+                response.json().then((data)=>{
+                    // console.log(data);
+                    document.querySelector('h2 span').append(data.cases);
+                    document.querySelector('h3 span').append(data.deaths);
+
+                });
+            });
+        }
+    </script>
+</body>
+</html>

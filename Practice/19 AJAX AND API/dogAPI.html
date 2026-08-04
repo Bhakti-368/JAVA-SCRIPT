@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            padding: 100px;
+        }
+
+        button {
+            background-color: lemonchiffon;
+            color: navy;
+            font-family: calibri;
+            font-size: 24px;
+            padding: 10px 20px;
+            border-radius: 16px;
+        }
+
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button onclick="getImage()">Click Here</button>
+        <img src="" alt="">
+    </section>
+    <script>
+        const DOG_API = "https://dog.ceo/api/breeds/image/random";
+
+        function getImage() {
+            fetch(DOG_API).then((response) => {
+                response.json().then((data) => {
+                    document.querySelector('img').attributes.src.value = data.message;
+                });
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

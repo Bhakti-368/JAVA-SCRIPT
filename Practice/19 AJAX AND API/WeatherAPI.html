@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        div.wrapper {
+            width: 100%;
+            height: 100vh;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        main {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <input type="text" name="search">
+        <button>search</button>
+        <h1></h1>
+        <h2></h2>
+        <h3></h3>
+        <img src="" alt="">
+        <span></span>
+        <h4></h4>
+
+
+        <main>
+            <section>surat</section>
+            <section>rajkot</section>
+            <section>nadiad</section>
+            <section>gandhinagar</section>
+        </main>
+
+    </div>
+    <script>
+        var days = ["Sunday", "Monday", "Tuesday"];
+
+        var bg = ["https://images.unsplash.com/photo-1655704241464-8ab95a98e6ce?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGQlMjBkZXNrdG9wJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww", "https://images.unsplash.com/photo-1498550744921-75f79806b8a7?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGQlMjBkZXNrdG9wJTIwd2FsbHBhcGVyc3xlbnwwfHwwfHx8MA%3D%3D"];
+
+        const WEATHER_API = `https://api.weatherapi.com/v1/current.json?key=e26ee2f87b994c98863100552231608&q=nadiad`;
+
+        fetch(WEATHER_API).then((res) => {
+            res.json().then((data) => {
+                if (data.current.condition.code <= 1100) {
+                    document.querySelector('div').style.backgroundImage = `url(${bg[0]})`;
+                } else {
+                    document.querySelector('div').style.backgroundImage = `url(${bg[1]})`;
+                }
+
+                document.querySelector('h1').innerText = data.location.name;
+                document.querySelector('h2').innerText = data.current.temp_c + "°";
+                document.querySelector('h3').innerText = data.location.localtime;
+
+                document.querySelector('span').innerText = data.current.condition.text;
+                document.querySelector('img').attributes.src.value = "https:" + data.current.condition.icon;
+
+                document.querySelector('h4').innerText = days[data.current.is_day];
+                console.log(data);
+
+            });
+        });
+
+
+        document.querySelector('button').onclick = function () {
+            let city = document.querySelector('input').value;
+
+            const WEATHER_API = `https://api.weatherapi.com/v1/current.json?key=e26ee2f87b994c98863100552231608&q=${city}`;
+
+            fetch(WEATHER_API).then((res) => {
+                res.json().then((data) => {
+                    if (data.current.condition.code <= 1100) {
+                        document.querySelector('div').style.backgroundImage = `url(${bg[0]})`;
+                    } else {
+                        document.querySelector('div').style.backgroundImage = `url(${bg[1]})`;
+                    }
+
+                    document.querySelector('h1').innerText = data.location.name;
+                    document.querySelector('h2').innerText = data.current.temp_c + "°";
+                    document.querySelector('h3').innerText = data.location.localtime;
+
+                    document.querySelector('span').innerText = data.current.condition.text;
+                    document.querySelector('img').attributes.src.value = "https:" + data.current.condition.icon;
+
+                    document.querySelector('h4').innerText = days[data.current.is_day];
+                    console.log(data);
+
+                });
+            });
+        }
+
+
+        document.querySelector('main').addEventListener('click', function (e) {
+            const WEATHER_API = `https://api.weatherapi.com/v1/current.json?key=e26ee2f87b994c98863100552231608&q=${e.target.innerText}`;
+            fetch(WEATHER_API).then((res) => {
+                res.json().then((data) => {
+                    if (data.current.condition.code <= 1100) {
+                        document.querySelector('div').style.backgroundImage = `url(${bg[0]})`;
+                    } else {
+                        document.querySelector('div').style.backgroundImage = `url(${bg[1]})`;
+                    }
+                    document.querySelector('h1').innerText = data.location.name;
+                    document.querySelector('h2').innerText = data.current.temp_c + "°";
+                    document.querySelector('h3').innerText = data.location.localtime;
+
+                    document.querySelector('span').innerText = data.current.condition.text;
+                    document.querySelector('img').attributes.src.value = "https:" + data.current.condition.icon;
+
+                    document.querySelector('h4').innerText = days[data.current.is_day];
+                    console.log(data);
+                });
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

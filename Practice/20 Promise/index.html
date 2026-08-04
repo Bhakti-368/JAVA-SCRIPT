@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // How to Create a Promise : 
+        // const myPromise = new Promise((resolve,reject)=>{
+        //     resolve("Successful Execute");
+        // });
+
+
+        // // How to Implement Promise : 
+
+        // myPromise.then((data)=>{
+        //     console.log(data);
+        // });
+
+
+        var a = 1;
+
+        const myPromise = new Promise((resolve,reject)=>{
+            if(a>10){
+                resolve("Successful Execute");
+            }else{
+                reject("Promise Rejected");
+            }
+        });
+
+
+         
+
+        myPromise.then((data)=>{
+            console.log(data);
+        },(err)=>{
+            console.log(err);
+        });
+
+    </script>
+</body>
+</html>
+
+<!-- 
+success : resolve 
+reject : reject
+-->

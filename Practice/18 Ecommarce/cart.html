@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <article class="wrapper">
+
+    </article>
+    <script>
+        const carts = JSON.parse(localStorage.getItem('morningCartProduct'));
+      
+        const Products = JSON.parse(localStorage.getItem('myProducts'));
+        let section = document.createElement('section');
+        for (const key in Products) {
+            let div = document.createElement('div');
+            for (const element of Products[key]) {
+                if (carts.includes(element.model)) {
+                    // let main = document.createElement('main');
+                    // let h3 = document.createElement('h3');
+                    // let h4 = document.createElement('h4');
+                    // let h5 = document.createElement('h5');
+                    // let img = document.createElement('img');
+                    // let p = document.createElement('p');
+                    // let button = document.createElement('button');
+
+                    // h3.append(element.company);
+                    // h4.append(element.model);
+                    // h5.append(element.price);
+                    // img.src = element.image;
+                    // p.append(element.description);
+                    // button.append("-");
+
+                    // main.appendChild(h3);
+                    // main.appendChild(img);
+                    // main.appendChild(h4);
+                    // main.appendChild(h5);
+                    // main.appendChild(p);
+                    // main.appendChild(button);
+
+                    // div.appendChild(main);
+                }
+            }
+            // section.appendChild(div);
+
+        }
+        // document.querySelector('.wrapper').appendChild(section);
+
+
+        document.body.addEventListener('click', function (e) {
+            if (e.target.tagName == "BUTTON") {
+                console.log(e.target.parentElement.children[2].innerText);
+                var temp =  carts.filter((element)=>{
+                    return element !=e.target.parentElement.children[2].innerText;
+                });
+                localStorage.setItem("morningCartProduct",JSON.stringify(temp));
+                location.href = "cart.html";
+            }
+        });
+    </script>
+</body>
+
+</html>

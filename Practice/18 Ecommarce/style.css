@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    padding: 50px;
+    display: grid;
+    gap: 30px;
+    font-family: calibri;
+}
+h2{
+    font-size: 56px;
+    color: navy;
+}
+section{
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 10px;
+}
+main{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgb(207, 207, 207);
+    display: grid;
+    gap: 5px;
+    align-items: start;
+}
+img{
+    width: 100%;
+}
+
+
+/*  */
+
+header{
+    background-color: white;
+    box-shadow: 0px 3px 10px gainsboro;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.material-symbols-outlined{
+    font-size: 42px !important;
+}
+
+input{
+    padding: 10px 15px;
+    font-size: 24px;
+    font-family: calibri;
+    border: none;
+}
+::placeholder{
+    text-decoration: underline;
+    font-style: italic;
+}
+button{
+    background-color: #ffce12;
+    color: black;
+    font-family: calibri;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+}
+.relative{
+    position: relative;
+}
+b{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: rgb(30, 29, 29);
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+span{
+    cursor: pointer;
+}

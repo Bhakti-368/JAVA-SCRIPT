@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // console.log(localStorage);
+
+        // const user =  {
+        //         fname : "Rajesh",
+        //         lname : "shah",
+        //         age : 20
+        //     };
+
+        //     delete user["age"];
+        // console.log(user);
+
+//         1. add
+            // localStorage.setItem("users",JSON.stringify(user));
+
+//         2. retrieve  
+            // console.log(JSON.parse(localStorage.getItem("users")));
+
+//         3. update 
+            // var tempUsers = JSON.parse(localStorage.getItem("users"));
+
+            
+            // tempUsers.push({fname : "Rahul",lname : "Patel",age : 10});
+            // tempUsers.push({fname : "Sahil",lname : "Sharma",age : 30});
+            
+            // localStorage.setItem("users",JSON.stringify(tempUsers));
+
+            // var updatedUsers =  JSON.parse(localStorage.getItem("users")).map((data)=>{
+            //     return ((data.fname == "Rahul")? {...data,lname : "dfgh"} : data);
+            // });
+            // console.log(updatedUsers);
+            // localStorage.setItem("users",JSON.stringify(updatedUsers));
+
+        // console.log(localStorage);
+
+//         4. delete
+            // const dataAfterDelete=  JSON.parse(localStorage.getItem("users")).filter((data)=>{
+            //     return data.fname != "Rajesh";
+            // });
+            // console.log(dataAfterDelete);
+            // localStorage.setItem("users",JSON.stringify(dataAfterDelete));
+
+            // console.log(localStorage.getItem("users"));
+
+
+            var updatedUsers =  JSON.parse(localStorage.getItem("users")).map((data)=>{
+                if(data.fname == "Sahil"){
+                    var temp = data;
+                    delete temp["age"];
+                    return temp;
+                }else{
+                    return data;
+                }
+                // return ((data.fname == "Sahil")? delete data["age"]  : );
+            });
+            console.log(updatedUsers);
+            // localStorage.setItem("users",JSON.stringify(updatedUsers));
+
+
+
+    </script>
+</body>
+</html>
