@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-    <div class="Weapper">
+    <div class="Weapperr">
+
 
         <div class="left">
 
-            <div class="logo">WeatherInfo</div>
+            <div class="logo">
+                <h2>WeatherInfo</h2>
+            </div>
 
-            <div class="bottom">
+            <div class="weather-box">
 
                 <div class="temp">
-                    31.1°
+                    <h1>24.1°</h1>
                 </div>
 
-                <div class="city">
-                    <h1>Rajkot</h1>
-                    <p>14:33 - Saturday, 25 July 2026</p>
+                <div class="city-time">
+                    <h2 class="city-name">Ahmedabad</h2>
+                    <p>17:28 - Saturday, 25 7 2026</p>
                 </div>
 
-                <div class="status">
-                    <i class="fa-solid fa-cloud-sun"></i>
-                    <p>Partly Cloudy</p>
+                <div class="condition">
+                    <img src="" alt="">
+                    
+                    <p class="p1">Moderate or heavy rain</p>
                 </div>
 
             </div>
@@ -41,12 +45,12 @@
 
         <div class="right">
 
-            <div class="search">
+            <div class="search-box">
 
-                <input type="text" placeholder="Search Location...">
+                <input type="text" placeholder="Search Location....">
 
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <button class="btnsearch">
+                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
 
             </div>
@@ -68,31 +72,35 @@
 
                 <div class="row">
                     <span>Cloudy</span>
-                    <span>75%</span>
+                    <span>100%</span>
                 </div>
 
-                <div class="row">
+                <div class="row1">
                     <span>Humidity</span>
-                    <span>71%</span>
+                    <span>94%</span>
                 </div>
 
-                <div class="row">
+                <div class="row2">
                     <span>Wind</span>
-                    <span>15.8 km/h</span>
+                    <span>13.7 km/h</span>
                 </div>
 
-            </div>
+                <div class="row3">
+                    <span>Rain</span>
+                    <span>98%</span>
+                </div>
 
-            <hr>
-
-            <div class="credit">
-                Created with ❤ by Bhakti Dharsandiya
             </div>
 
         </div>
 
     </div>
 
+    <footer>
+        Created with 🤍by Bhakti Dharsandiya
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
